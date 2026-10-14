@@ -389,7 +389,7 @@ window.INVITADOS_DATA = [
     "id": 56,
     "name": "Jean Carlos, esposa e hija",
     "raw_name": "Jean Carlos,esposa e hija",
-    "cupos": 1,
+    "cupos": 3,
     "slug": "jean-carlos-esposa-e-hija"
   },
   {
