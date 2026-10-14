@@ -1,0 +1,1109 @@
+/* ==========================================
+   QUINCEAÑERA INVITATION - MARIANGEL
+   Theme: Cinderella (Blue, Silver, Gold)
+   ========================================== */
+
+/* --- VARIABLES --- */
+:root {
+    /* Stitch: Royal Glass Fairytale Design System */
+    --blue-light: #edf4ff;
+    --blue-mid: #8bcefe;
+    --blue-dark: #5499c7;
+    --blue-deep: #0c6490;
+    --silver-soft: #f7f9ff;
+    --silver-accent: #c0c7cf;
+    --gold: #d4af37;
+    --gold-light: #ffe088;
+    --cream: #ffffff;
+    --bg-main: #f7f9ff;
+    --bg-soft: #e3efff;
+    --bg-warm: #d4e4f7;
+    --text-dark: #0d1d2a;
+    --text-medium: #284b5e;
+    --text-light: #40484e;
+    --white: #ffffff;
+
+    /* Typography */
+    --font-script: 'Playfair Display', serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-display: 'Playfair Display', serif;
+}
+
+/* --- RESET --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--bg-main);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    max-width: 100vw;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--blue-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue-mid);
+    border-radius: 3px;
+}
+
+/* ==========================================
+   FLOATING SPARKLES (Cinderella Magic)
+   ========================================== */
+.petal {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, var(--white) 0%, transparent 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--blue-mid);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.petal-1 {
+    animation: sparkleFall 12s linear infinite 0s;
+    left: 10%;
+}
+
+.petal-2 {
+    animation: sparkleFall 15s linear infinite 3s;
+    left: 30%;
+    background: radial-gradient(circle, var(--gold-light) 0%, transparent 70%);
+}
+
+.petal-3 {
+    animation: sparkleFall 11s linear infinite 5s;
+    left: 55%;
+}
+
+.petal-4 {
+    animation: sparkleFall 14s linear infinite 8s;
+    left: 75%;
+    background: radial-gradient(circle, var(--blue-light) 0%, transparent 70%);
+}
+
+.petal-5 {
+    animation: sparkleFall 13s linear infinite 2s;
+    left: 90%;
+}
+
+@keyframes sparkleFall {
+    0% {
+        top: -5%;
+        opacity: 0;
+        transform: translateX(0) scale(0.5);
+    }
+
+    10% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: translateX(30px) scale(0.8);
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        top: 105%;
+        opacity: 0;
+        transform: translateX(-20px) scale(0.5);
+    }
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg,
+            #dbe9f6 0%,
+            #e6f0fa 25%,
+            #edf4fb 50%,
+            #f4f8fb 75%,
+            var(--bg-main) 100%);
+    padding: 3rem 1.5rem 6rem;
+    overflow: hidden;
+}
+
+/* Subtle radial glow */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(168, 203, 240, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 85% 75%, rgba(240, 244, 248, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Side floral decorations */
+.hero-bg-floral {
+    position: absolute;
+    top: 5%;
+    opacity: 0.6;
+    z-index: 1;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-bg-floral-left {
+    left: -20px;
+}
+
+.hero-bg-floral-right {
+    right: -20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    margin: auto 0;
+}
+
+/* Crown / Carriage Motif */
+.crown-icon {
+    margin-bottom: 0.3rem;
+    animation: fadeInDown 1.2s ease-out;
+    filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.3));
+}
+
+/* Name */
+.quinceanera-name {
+    font-family: var(--font-script);
+    font-size: 4.2rem;
+    color: var(--blue-deep);
+    line-height: 1;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+    text-shadow: 1px 2px 4px rgba(74, 123, 176, 0.15);
+}
+
+.quinceanera-subtitle {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-medium);
+    letter-spacing: 2px;
+    margin-top: 0.2rem;
+    animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+/* Decorative line */
+.decorative-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 0.8rem 0;
+    animation: fadeIn 1.5s ease-out 0.7s backwards;
+}
+
+.line-left,
+.line-right {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue-mid), transparent);
+}
+
+.line-flower {
+    color: var(--silver-accent);
+    font-size: 1.2rem;
+}
+
+.hero-label {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--blue-dark);
+    letter-spacing: 3px;
+    animation: fadeInUp 1s ease-out 0.9s backwards;
+}
+
+/* Girl SVG illustration */
+.hero-illustration {
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1.2s ease-out 1.1s backwards;
+}
+
+.girl-svg {
+    filter: drop-shadow(0 8px 20px rgba(108, 160, 220, 0.2));
+    max-height: 42vh;
+    width: auto;
+}
+
+/* Butterfly / Bird */
+.hero-butterfly {
+    margin: 0.5rem 0;
+    animation: gentleSway 4s ease-in-out infinite, fadeIn 1.5s ease-out 1.3s backwards;
+}
+
+.butterfly-svg {
+    filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.2));
+}
+
+@keyframes gentleSway {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) translateX(-3px);
+    }
+
+    50% {
+        transform: rotate(5deg) translateX(3px);
+    }
+}
+
+/* Countdown */
+.countdown-section {
+    margin-top: 1rem;
+    animation: fadeInUp 1s ease-out 1.5s backwards;
+}
+
+.countdown-label {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-medium);
+    margin-bottom: 0.8rem;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 55px;
+}
+
+.countdown-number {
+    font-family: var(--font-sans);
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1;
+}
+
+.countdown-text {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-medium);
+    margin-top: 0.4rem;
+}
+
+.countdown-separator {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    margin-top: -1rem;
+    opacity: 0.7;
+}
+
+/* Hero bottom floral */
+.hero-bottom-floral {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+/* ==========================================
+   SHARED SECTION STYLES
+   ========================================== */
+.section-floral-top {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.section-title-caps {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.section-title-script {
+    font-family: var(--font-script);
+    font-size: 2.8rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.section-title-script.blue {
+    color: var(--blue-dark);
+}
+
+/* Scroll animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   EVENT DATE SECTION
+   ========================================== */
+.event-date {
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-main), var(--bg-warm), var(--bg-soft));
+    text-align: center;
+}
+
+.date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.shoe-icon {
+    animation: gentleBounce 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 12px rgba(176, 196, 222, 0.6));
+}
+
+@keyframes gentleBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.date-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.date-row {
+    display: flex;
+    align-items: center;
+}
+
+.date-weekday,
+.date-time {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--text-medium);
+}
+
+.date-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-number {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--blue-deep);
+    line-height: 1;
+}
+
+.date-month {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--text-medium);
+    margin-top: 0.2rem;
+}
+
+.date-year {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    margin-top: 0.3rem;
+}
+
+.golden-swirl {
+    margin-top: 2rem;
+    text-align: center;
+    opacity: 0.5;
+}
+
+/* ==========================================
+   SONG / LEGEND SECTION
+   ========================================== */
+.song-section {
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-soft), #e4eff8, var(--bg-soft));
+    text-align: center;
+}
+
+.song-message {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.song-message p {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+/* ==========================================
+   SPOTIFY SECTION
+   ========================================== */
+.spotify-section {
+    padding: 2.5rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-soft), #dce9f5, var(--bg-soft));
+    text-align: center;
+}
+
+.spotify-embed {
+    max-width: 400px;
+    margin: 1.5rem auto 0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(108, 160, 220, 0.2);
+}
+
+/* ==========================================
+   ITINERARY SECTION
+   ========================================== */
+.itinerary-section {
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-soft), #dfecf7, #d5e5f3);
+}
+
+.itinerary-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.clock-circle {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 0.8rem;
+    background: linear-gradient(135deg, var(--white), #f0f6fb);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(108, 160, 220, 0.15);
+}
+
+.clock-floral-wrap {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clock-icon-inner {
+    z-index: 2;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 26px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--silver-accent), var(--blue-mid), var(--blue-dark), var(--silver-accent));
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    padding-left: 2px;
+    position: relative;
+    opacity: 1;
+    transform: none;
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(108, 160, 220, 0.15);
+    z-index: 2;
+    border: 2px solid var(--blue-light);
+}
+
+.timeline-content {
+    padding-top: 0.5rem;
+}
+
+.timeline-content h3 {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.15rem;
+}
+
+.timeline-content p {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-medium);
+}
+
+.timeline-end-butterfly {
+    text-align: right;
+    margin-top: 0.5rem;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: gentleSway 4s ease-in-out infinite;
+}
+
+/* ==========================================
+   LOCATION SECTION
+   ========================================== */
+.location-section {
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(180deg, #d5e5f3, #e6f0fa, #d5e5f3);
+    text-align: center;
+}
+
+.location-container {
+    background: var(--white);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(108, 160, 220, 0.15);
+    border: 1px solid var(--blue-light);
+    max-width: 380px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.location-icon {
+    margin-bottom: 1rem;
+    animation: gentleBounce 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 4px 10px rgba(108, 160, 220, 0.3));
+}
+
+.location-name {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 1rem 0 1.8rem;
+    letter-spacing: 1px;
+}
+
+.map-button {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+    color: var(--white);
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.map-button:hover::before {
+    left: 100%;
+}
+
+.map-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================
+   DRESS CODE SECTION
+   ========================================== */
+.dresscode-section {
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(180deg, #d5e5f3, var(--bg-soft), var(--bg-warm));
+    text-align: center;
+}
+
+.dresscode-sign {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.sign-hook {
+    text-align: center;
+    margin-bottom: -2px;
+}
+
+.sign-board {
+    background: linear-gradient(135deg, #f0f4f8, #e6f0fa, #dbe9f6);
+    padding: 1.3rem 2.2rem;
+    border-radius: 8px;
+    box-shadow:
+        0 6px 20px rgba(108, 160, 220, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sign-board h2 {
+    font-family: var(--font-script);
+    font-size: 1.9rem;
+    color: var(--blue-deep);
+    line-height: 1.3;
+}
+
+.sign-butterfly {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    animation: gentleSway 3s ease-in-out infinite;
+}
+
+.dresscode-text {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.dresscode-text strong {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.dresscode-couple {
+    margin-top: 0.5rem;
+    filter: drop-shadow(0 4px 12px rgba(108, 160, 220, 0.15));
+}
+
+/* ==========================================
+   LLUVIA DE SOBRES
+   ========================================== */
+.sobres-section {
+    padding: 3rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-warm), var(--bg-soft));
+    text-align: center;
+}
+
+.sobre-icon {
+    margin-bottom: 1rem;
+    animation: gentleSway 3s ease-in-out infinite;
+    filter: drop-shadow(0 3px 8px rgba(168, 203, 240, 0.3));
+}
+
+.sobres-text {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+    font-style: italic;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   RSVP SECTION
+   ========================================== */
+.rsvp-section {
+    position: relative;
+    padding: 0;
+    background: var(--bg-soft);
+    text-align: center;
+    overflow: hidden;
+}
+
+.rsvp-arch {
+    width: 100%;
+    height: 50px;
+    background: var(--bg-soft);
+    border-radius: 0 0 50% 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.rsvp-inner {
+    padding: 1rem 1.5rem 2rem;
+    background: linear-gradient(180deg,
+            var(--bg-soft),
+            var(--blue-light),
+            rgba(168, 203, 240, 0.3));
+    position: relative;
+    z-index: 1;
+}
+
+.rsvp-badge {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--white), #f4f8fb);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 22px rgba(108, 160, 220, 0.15);
+    position: relative;
+}
+
+.rsvp-badge-floral {
+    position: absolute;
+    bottom: -12px;
+    opacity: 0.6;
+}
+
+.rsvp-check {
+    margin-bottom: 0.2rem;
+}
+
+.rsvp-badge-title {
+    font-family: var(--font-script);
+    font-size: 1.4rem;
+    color: var(--blue-deep);
+}
+
+.rsvp-message {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    line-height: 1.7;
+    font-style: italic;
+    max-width: 380px;
+    margin: 0 auto 1.8rem;
+}
+
+.rsvp-button {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+    color: var(--white);
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow:
+        0 4px 15px rgba(212, 175, 55, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.rsvp-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.rsvp-button:hover::before {
+    left: 100%;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.rsvp-button:active {
+    transform: translateY(0);
+}
+
+.rsvp-illustration {
+    margin: 2rem auto 0;
+    filter: drop-shadow(0 6px 15px rgba(108, 160, 220, 0.15));
+}
+
+.rsvp-bottom-floral {
+    opacity: 0.5;
+    margin-top: 1rem;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+    padding: 2rem 1.5rem;
+    background: linear-gradient(180deg, rgba(168, 203, 240, 0.2), var(--blue-light));
+    text-align: center;
+}
+
+.footer-text {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.footer-name {
+    font-family: var(--font-script);
+    font-size: 2.5rem;
+    color: var(--blue-deep);
+    margin: 0.3rem 0;
+}
+
+.footer-date {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.footer-florals {
+    margin-top: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 400px) {
+    .hero {
+        padding: 2rem 1.5rem 6rem;
+    }
+
+    .quinceanera-name {
+        font-size: 3rem;
+    }
+
+    .quinceanera-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-label {
+        font-size: 1.3rem;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+        min-width: 45px;
+    }
+
+    .countdown-separator {
+        font-size: 1.6rem;
+    }
+
+    .countdown-text {
+        font-size: 0.7rem;
+    }
+
+    .date-number {
+        font-size: 3.5rem;
+    }
+
+    .date-month {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+
+    .section-title-script {
+        font-size: 2.2rem;
+    }
+
+    .hero-bg-floral {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 3rem 2rem;
+    }
+
+    .quinceanera-name {
+        font-size: 5.5rem;
+    }
+
+    .quinceanera-subtitle {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+    }
+
+    .countdown-number {
+        font-size: 3rem;
+        min-width: 70px;
+    }
+
+    .date-number {
+        font-size: 5.5rem;
+    }
+
+    .song-message p {
+        font-size: 1.35rem;
+    }
+
+    .hero-bg-floral svg {
+        width: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero,
+    .event-date,
+    .song-section,
+    .itinerary-section,
+    .dresscode-section,
+    .sobres-section,
+    .rsvp-section,
+    .footer {
+        max-width: 520px;
+        width: 100%;
+    }
+
+    .hero {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .footer {
+        border-radius: 0 0 20px 20px;
+        margin-bottom: 2rem;
+    }
+}

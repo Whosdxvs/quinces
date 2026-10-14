@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mariangel XV - Mis Quince Años</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#233240",
+            "surface-container": "#e3efff",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#8bcefe",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#001e2f",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#001e2c",
+            "on-primary-fixed-variant": "#004c6e",
+            "on-primary": "#ffffff",
+            "secondary-container": "#fed65b",
+            "on-surface-variant": "#40484e",
+            "tertiary-container": "#7597ad",
+            "surface-dim": "#ccdcee",
+            "secondary": "#735c00",
+            "surface-bright": "#f7f9ff",
+            "outline": "#70787f",
+            "surface-tint": "#0c6490",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#0c6490",
+            "outline-variant": "#c0c7cf",
+            "on-secondary-fixed": "#241a00",
+            "tertiary": "#416276",
+            "on-tertiary-fixed-variant": "#284b5e",
+            "surface-container-high": "#daeafd",
+            "tertiary-fixed-dim": "#a8cbe2",
+            "surface": "#f7f9ff",
+            "primary-fixed": "#c9e6ff",
+            "on-secondary-fixed-variant": "#574500",
+            "inverse-primary": "#8bcefe",
+            "inverse-on-surface": "#e8f2ff",
+            "on-error": "#ffffff",
+            "on-surface": "#0d1d2a",
+            "surface-container-highest": "#d4e4f7",
+            "secondary-fixed": "#ffe088",
+            "error-container": "#ffdad6",
+            "on-background": "#0d1d2a",
+            "secondary-fixed-dim": "#e9c349",
+            "surface-container-low": "#edf4ff",
+            "on-primary-container": "#002e46",
+            "tertiary-fixed": "#c4e7ff",
+            "primary-container": "#5499c7",
+            "surface-variant": "#d4e4f7",
+            "background": "#f7f9ff",
+            "on-tertiary-container": "#062f41",
+            "on-secondary-container": "#745c00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin-desktop": "2.5rem",
+            "margin": "1.25rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "gutter-desktop": "1.5rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Montserrat"],
+            "body-lg": ["Montserrat"],
+            "label-md": ["Montserrat"],
+            "headline-md": ["Playfair Display"],
+            "body-sm": ["Montserrat"],
+            "headline-lg": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-lg": ["Montserrat"],
+            "body-md": ["Montserrat"],
+            "headline-xl": ["Playfair Display"],
+            "headline-xl-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 12px 36px -8px rgba(84, 153, 199, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+    }
+    .glass-card-deep {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow: 0 16px 40px -10px rgba(84, 153, 199, 0.22);
+    }
+    .gold-shimmer {
+      background: linear-gradient(135deg, #F9E79F 0%, #D4AF37 50%, #B7950B 100%);
+    }
+    .celestial-glow {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Ambient Royal Canvas Background -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute top-[40%] -left-32 w-[380px] h-[380px] bg-secondary-fixed/25 rounded-full blur-3xl"></div>
+<div class="absolute top-[75%] -right-32 w-[420px] h-[420px] bg-primary-fixed/30 rounded-full blur-3xl"></div>
+</div>
+<!-- Shared Component: TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-2 max-w-[460px] mx-auto bg-surface/80 dark:bg-on-surface/80 backdrop-blur-md shadow-sm border-b border-secondary/20 dark:border-secondary/30">
+<div class="flex items-center gap-2">
+<button aria-label="Escudo Real" class="p-1 text-primary dark:text-inverse-primary hover:text-secondary hover:bg-surface-container-high/50 dark:hover:bg-surface-container/20 rounded-full transition-colors active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="crown">crown</span>
+</button>
+<span class="text-headline-sm font-headline-sm text-secondary dark:text-secondary-fixed tracking-wider">Mariangel XV</span>
+</div>
+<!-- Music Disc Action Button (Top Right) -->
+<button aria-label="Reproducir Vals Real" class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-low text-primary border border-secondary/30 hover:text-secondary hover:bg-surface-container-high/50 dark:hover:bg-surface-container/20 transition-colors active:scale-95 celestial-glow" id="musicToggleBtn">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="music_note">music_note</span>
+</button>
+</header>
+<!-- Mobile Max-Width Container -->
+<main class="relative z-10 max-w-[460px] mx-auto px-margin pt-16 pb-28 flex flex-col gap-space-xl">
+<!-- 1. Royal Monogram & Royal Crest Intro -->
+<section class="text-center pt-4 flex flex-col items-center" id="inicio">
+<div class="relative w-28 h-28 mx-auto mb-3 flex items-center justify-center p-2 rounded-full bg-surface-container-lowest/80 border border-secondary/40 shadow-md">
+<img alt="Insignia real Mariangel XV" class="w-full h-full object-contain rounded-md drop-shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1WWwWli_r0cJCf_EIHmpjG7VOl2pnEoXLdZPAOR6QwQ9azvHIB981msKZ--amPXsb4NMzGfJ1UQpi91A2_eaPigIdrjowrqQnQ2QhmwF_JUFph7V6nkCxgPju_uyqKYbsTNBj5vb01TZRp18uXpTDJncvscvAvP3fUgDptZdA9lx61gOWYCamnkQolB6U4xE_99iV-H9OQkLPDo2T5F-exQB-Rv4AzsS3DWPHNmwUNZeoauDzF2APiGww"/>
+<div class="absolute -top-2 -right-1 text-secondary">
+<span class="material-symbols-outlined text-[20px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-1">
+        Corte Imperial • Gala Real
+      </p>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-wide">
+        Mis Quince Años
+      </h1>
+<h2 class="font-headline-md text-headline-md text-tertiary italic font-semibold mt-1">
+        Mariangel Valencia Gálvez
+      </h2>
+<!-- Subtle Filigree Divider -->
+<div class="flex items-center justify-center gap-3 w-full my-4">
+<span class="h-px bg-secondary/30 flex-1 max-w-[80px]"></span>
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="diamond">diamond</span>
+<span class="h-px bg-secondary/30 flex-1 max-w-[80px]"></span>
+</div>
+</section>
+<!-- 2. Hero Banner: Cinderella Fairy Tale Castle & Emotional Quote -->
+<section class="glass-card rounded-xl p-4 relative overflow-hidden">
+<!-- Image Staging -->
+<div class="relative rounded-lg overflow-hidden border border-secondary/30 shadow-inner group">
+<img class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An ethereal fairytale castle illuminated with sparkling celestial lights at midnight under a starry crescent moon sky. In the foreground rests a luminous crystal glass slipper on an ornate velvet and gold royal cushion beside a gilded pumpkin carriage, reflecting an enchanted Cinderella atmosphere in rich royal blues and champagne golds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YnoX60W-uBLVquNRA5oB04HQSSY7E0k12g_sQloJ1flggKkAPInoGeBBqUpz6Aq2sYM0aVTQPMMpVEEtVJQa18X73cLXnXD4e1gQuVnfZMMxGA-v2m_fvV8min2nEMQ_Cfs1HkNg9xGKgnMdeZEie_QVcyl5amF_jV3M9b9tDd2pl4NPKo7_m2MBLjSBgUD_NJ21w5GCSvVqzYyYAiLrNsUrA8QY54mKBLy18lkBX4ClaI7GlGv5mFisCj2MsHxox7yAHckqskk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 text-on-primary">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/70 backdrop-blur-sm border border-secondary/40 text-on-primary mb-1">
+<span class="material-symbols-outlined text-secondary-fixed text-xs" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Un Sueño Hecho Realidad</span>
+</div>
+</div>
+</div>
+<!-- Poetic Gratitude Note -->
+<div class="text-center mt-4 px-2">
+<p class="font-headline-sm text-headline-sm text-primary italic mb-2">
+          “Cuando crees en tus sueños, la magia de Dios florece en tu corazón.”
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Con infinita gratitud al Todopoderoso por bendecir mis pasos y a mis amados padres por su amor eterno e incondicional, tengo el honor de invitarte a celebrar esta noche de ensueño.
+        </p>
+</div>
+</section>
+<!-- 3. Magical Countdown Timer -->
+<section class="glass-card rounded-xl p-5 text-center relative">
+<div class="flex items-center justify-center gap-2 mb-3">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="schedule">schedule</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">
+          Tiempo para el Gran Baile
+        </span>
+</div>
+<!-- Countdown Grid -->
+<div class="grid grid-cols-4 gap-2">
+<!-- Days -->
+<div class="bg-surface-container-lowest/80 border border-secondary/30 rounded-lg p-2.5 shadow-sm">
+<span class="block font-headline-md text-headline-md text-primary font-bold" id="count-days">245</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Días</span>
+</div>
+<!-- Hours -->
+<div class="bg-surface-container-lowest/80 border border-secondary/30 rounded-lg p-2.5 shadow-sm">
+<span class="block font-headline-md text-headline-md text-primary font-bold" id="count-hours">18</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Horas</span>
+</div>
+<!-- Minutes -->
+<div class="bg-surface-container-lowest/80 border border-secondary/30 rounded-lg p-2.5 shadow-sm">
+<span class="block font-headline-md text-headline-md text-primary font-bold" id="count-minutes">42</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Min</span>
+</div>
+<!-- Seconds -->
+<div class="bg-surface-container-lowest/80 border border-secondary/30 rounded-lg p-2.5 shadow-sm">
+<span class="block font-headline-md text-headline-md text-secondary font-bold" id="count-seconds">30</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Seg</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary italic mt-3">
+        El reloj se acerca a la medianoche encantada...
+      </p>
+</section>
+<!-- 4. El Gran Día: Date & Calendar Action -->
+<section class="glass-card rounded-xl p-5 text-center border-t-2 border-secondary/60">
+<div class="inline-block px-3 py-1 bg-surface-container-high rounded-full text-primary border border-secondary/30 mb-2">
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Cita de Honor</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold mt-1">
+        Sábado, 14 de Noviembre
+      </h3>
+<p class="font-headline-sm text-headline-sm text-secondary font-medium">
+        Año 2026 • 7:00 PM
+      </p>
+<div class="mt-4 p-3 bg-surface-container-lowest/70 rounded-lg border border-outline-variant/50">
+<div class="flex items-center justify-center gap-2 text-primary font-medium">
+<span class="material-symbols-outlined text-[20px]" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md font-semibold">Palacio Cristal Imperial</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Gran Salón Real de Eventos • Valet Parking de Gala
+        </p>
+</div>
+<!-- Add to Calendar CTA -->
+<a class="mt-4 inline-flex items-center justify-center gap-2 w-full py-3 px-4 rounded-lg gold-shimmer text-on-secondary-fixed font-label-lg text-label-lg font-bold shadow-md hover:opacity-95 active:scale-95 transition-all duration-200" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Mis+Quince+A%C3%B1os+-+Mariangel+Valencia+G%C3%A1lvez&amp;dates=20261114T190000/20261115T030000&amp;details=Celebraci%C3%B3n+real+de+XV+A%C3%B1os+de+Mariangel+Valencia+G%C3%A1lvez+en+el+Palacio+Cristal+Imperial.&amp;location=Palacio+Cristal+Imperial" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]" data-icon="event">event</span>
+        AGENDAR EN MI CALENDARIO
+      </a>
+</section>
+<!-- 5. Cinderella Music Player -->
+<section class="glass-card-deep rounded-xl p-4">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed/40 border border-secondary flex items-center justify-center text-secondary celestial-glow">
+<span class="material-symbols-outlined" data-icon="music_note">music_note</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-base font-semibold">Vals de Cenicienta</h4>
+<p class="font-body-sm text-body-sm text-tertiary">A Dream Is a Wish Your Heart Makes</p>
+</div>
+</div>
+<!-- Play/Pause Micro-interaction -->
+<button class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-90 transition-transform" id="audioControlBtn">
+<span class="material-symbols-outlined text-[20px]" data-icon="play_arrow" id="playIcon">play_arrow</span>
+</button>
+</div>
+<!-- Fake Progress Bar -->
+<div class="w-full bg-surface-container-high rounded-full h-1.5 mt-2 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full w-2/5 rounded-full"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">01:14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">03:42</span>
+</div>
+</section>
+<!-- 6. Itinerary Timeline: Royal Moments -->
+<section class="glass-card rounded-xl p-5" id="itinerario">
+<div class="text-center mb-5">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-high rounded-full text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Protocolo Real</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">
+          Itinerario de la Noche
+        </h3>
+</div>
+<!-- Chronological Timeline -->
+<div class="relative pl-6 border-l-2 border-secondary/40 space-y-6">
+<!-- Item 1 -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-secondary-fixed"></div>
+<span class="font-label-md text-label-md text-secondary font-bold tracking-wider uppercase block">
+            7:00 PM
+          </span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">
+            Bienvenida &amp; Alfombra Celeste
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Recepción real de invitados, cóctel de bienvenida de cristal y fotografía de recuerdo.
+          </p>
+</div>
+<!-- Item 2 -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-secondary-fixed-dim border-2 border-primary"></div>
+<span class="font-label-md text-label-md text-secondary font-bold tracking-wider uppercase block">
+            7:30 PM
+          </span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">
+            Entrada Triunfal &amp; Vals de Gala
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Ceremonia del cambio de zapatilla de cristal, vals real junto a sus padres y corte de honor.
+          </p>
+</div>
+<!-- Item 3 -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-secondary-fixed"></div>
+<span class="font-label-md text-label-md text-secondary font-bold tracking-wider uppercase block">
+            9:00 PM
+          </span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">
+            Banquete Imperial &amp; Brindis
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Cena de gala en honor a la Quinceañera, palabras emotivas y brindis con champaña real.
+          </p>
+</div>
+<!-- Item 4 -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-secondary border-2 border-secondary-fixed"></div>
+<span class="font-label-md text-label-md text-secondary font-bold tracking-wider uppercase block">
+            10:00 PM - Fin de Fiesta
+          </span>
+<h4 class="font-headline-sm text-headline-sm text-primary font-semibold mt-0.5">
+            Gran Baile &amp; Medianoche Mágica
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Apertura de pista de cristal, hora loca imperial con sorpresas y fiesta inolvidable.
+          </p>
+</div>
+</div>
+</section>
+<!-- 7. Ubicación del Palacio: Venue & Navigation Maps -->
+<section class="glass-card rounded-xl p-5" id="ubicacion">
+<div class="text-center mb-4">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider block font-semibold">
+          Lugar de Encuentro
+        </span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">
+          Palacio Cristal Imperial
+        </h3>
+</div>
+<!-- Palace Venue Imagery -->
+<div class="relative rounded-lg overflow-hidden border border-secondary/30 mb-3 shadow-sm">
+<img class="w-full h-44 object-cover" data-alt="An opulent illuminated ballroom palace with crystal chandeliers, grand arched glass windows, white floral decorations, and a gleaming reflective marble dance floor fit for a royal fairytale celebration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFHs8E0Sp9q4jG63hBhnN8z5y06MLpWURutKUr8AsDXqru5Yg2NwHqBdwTvZZA2nh6MH2LK7XCSB2OcQxa3GBVBJNPH_t-c3ZiRLy98qu7clVEOqLsuBFY0cpSmcYvianzlaGHv677iTxhX_29oitVJBcrr1-oRq5ZQGGSsVBANh_XAC0UORnuCv7srRzOos6M9zLJisGaFy1d4IqKhafof4alagmJJpDkYE7WGkRUvT3F7sUhXj9xjM_0kQBR5KXPmNlVk1hAER0"/>
+<div class="absolute bottom-2 left-2 bg-inverse-surface/80 text-inverse-on-surface px-2.5 py-1 rounded text-xs flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-xs text-secondary-fixed" data-icon="pin_drop">pin_drop</span>
+          Av. Los Rosales #1540, Ciudad Real
+        </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center mb-4">
+        Contamos con servicio de estacionamiento privado y estricto control de recepción para tu total comodidad.
+      </p>
+<!-- Action Buttons for Navigation -->
+<div class="grid grid-cols-2 gap-2">
+<a class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-surface-container-lowest border border-primary/30 text-primary font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors active:scale-95" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]" data-icon="map">map</span>
+          Google Maps
+        </a>
+<a class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-surface-container-lowest border border-secondary/40 text-secondary font-label-lg text-label-lg font-semibold hover:bg-surface-container-high transition-colors active:scale-95" href="https://www.waze.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]" data-icon="navigation">navigation</span>
+          Abrir en Waze
+        </a>
+</div>
+</section>
+<!-- 8. Código de Vestimenta (Dress Code) -->
+<section class="glass-card rounded-xl p-5 text-center">
+<div class="inline-flex items-center gap-1 text-secondary mb-1">
+<span class="material-symbols-outlined text-base" data-icon="styler">styler</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Etiqueta &amp; Elegancia</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">
+        Código de Vestimenta
+      </h3>
+<p class="font-headline-sm text-headline-sm text-secondary font-medium mt-1">
+        Formal • Gala Rigurosa
+      </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 mb-4">
+        Sugerencia de tonos elegantes para caballeros y damas de la corte:
+      </p>
+<!-- Color Palette Circles -->
+<div class="flex items-center justify-center gap-3 mb-5">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#001f3f] shadow-sm border border-secondary/40"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Marino</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#58111A] shadow-sm border border-secondary/40"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Vino</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#0B4F37] shadow-sm border border-secondary/40"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Esmeralda</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-[#D4AF37] shadow-sm border border-secondary/40"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Dorado</span>
+</div>
+</div>
+<!-- Cinderella Color Exclusivity Notice -->
+<div class="p-3.5 bg-surface-container-high/90 rounded-lg border-2 border-secondary/60 text-left">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5" data-icon="warning">warning</span>
+<div>
+<span class="block font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">
+              Aviso Especial de la Quinceañera
+            </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 font-medium leading-snug">
+              El color <strong class="text-primary font-semibold">Azul Celeste</strong> queda reservado exclusivamente para el vestido de nuestra quinceañera <strong class="text-primary font-semibold">Mariangel</strong>.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Lluvia de Sobres (Gift Registry) -->
+<section class="glass-card rounded-xl p-5 text-center">
+<div class="w-12 h-12 mx-auto rounded-full bg-secondary-fixed/50 border border-secondary/40 flex items-center justify-center text-secondary mb-2 celestial-glow">
+<span class="material-symbols-outlined text-2xl" data-icon="mail">mail</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">
+        Lluvia de Sobres
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-xs mx-auto leading-relaxed">
+        Tu presencia y bendición son nuestro mejor regalo. Si deseas otorgar un presente a Mariangel en este día especial, dispondremos de un <em>buzón de cristal</em> en la entrada del palacio.
+      </p>
+<div class="mt-4 py-2 px-3 inline-flex items-center gap-2 rounded-full bg-surface-container-low border border-secondary/30">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">¡Gracias por ser parte de mi historia!</span>
+</div>
+</section>
+<!-- 10. Confirmación de Asistencia (RSVP via WhatsApp) -->
+<section class="glass-card-deep rounded-xl p-5 text-center border-2 border-secondary/50 celestial-glow" id="confirmar">
+<div class="inline-flex items-center gap-1 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Pase Personal</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">
+        Confirmar Asistencia
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+        Agradecemos confirmar tu valiosa compañía antes del <strong class="text-primary font-semibold">25 de Octubre de 2026</strong> para reservar tu lugar de honor en nuestra corte real.
+      </p>
+<!-- WhatsApp Direct Action Button -->
+<a class="mt-5 flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-lg gold-shimmer text-on-secondary-fixed font-label-lg text-label-lg font-bold shadow-lg hover:brightness-105 active:scale-95 transition-all duration-200" href="https://api.whatsapp.com/send?phone=521234567890&amp;text=%C2%A1Hola!%20Confirmo%20con%20mucha%20alegr%C3%ADa%20mi%20asistencia%20a%20los%20XV%20A%C3%B1os%20de%20Mariangel%20Valencia%20G%C3%A1lvez.%20%E2%9C%A8%F0%9F%91%91" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]" data-icon="chat">chat</span>
+        CONFIRMAR VÍA WHATSAPP
+      </a>
+<p class="font-label-sm text-label-sm text-tertiary mt-2">
+        Cupo estrictamente reservado • Pase de Gala
+      </p>
+</section>
+<!-- Royal Footer -->
+<footer class="text-center pt-2 pb-6 flex flex-col items-center">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-md text-label-md tracking-widest uppercase">Mariangel Valencia Gálvez</span>
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary italic text-sm">
+        “Y vivieron felices por siempre...”
+      </p>
+<p class="font-label-sm text-label-sm text-on-surface-variant/70 mt-2">
+        Noviembre 2026 • Celebración Real de XV Años
+      </p>
+</footer>
+</main>
+<!-- Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center px-2 py-2 max-w-[460px] mx-auto pb-safe bg-surface/85 dark:bg-inverse-surface/90 backdrop-blur-lg border-t border-secondary/20 dark:border-secondary/30 shadow-[0_-8px_24px_rgba(84,153,199,0.12)] shadow-lg">
+<!-- Inicio (Active Tab) -->
+<a class="flex flex-col items-center justify-center text-on-secondary-container bg-secondary-container/90 dark:bg-secondary-container dark:text-on-secondary-container rounded-full px-3 py-1 shadow-[0_0_12px_rgba(212,175,55,0.35)] active:scale-90 transition-transform duration-200 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#inicio">
+<span class="material-symbols-outlined text-[20px]" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-label-sm font-label-sm font-semibold tracking-wider uppercase mt-0.5">Inicio</span>
+</a>
+<!-- Itinerario -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-2 py-1 active:scale-90 transition-transform duration-200 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#itinerario">
+<span class="material-symbols-outlined text-[20px]" data-icon="schedule">schedule</span>
+<span class="text-label-sm font-label-sm font-semibold tracking-wider uppercase mt-0.5">Itinerario</span>
+</a>
+<!-- Ubicación -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-2 py-1 active:scale-90 transition-transform duration-200 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#ubicacion">
+<span class="material-symbols-outlined text-[20px]" data-icon="diamond">diamond</span>
+<span class="text-label-sm font-label-sm font-semibold tracking-wider uppercase mt-0.5">Ubicación</span>
+</a>
+<!-- Confirmar -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-2 py-1 active:scale-90 transition-transform duration-200 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#confirmar">
+<span class="material-symbols-outlined text-[20px]" data-icon="send">send</span>
+<span class="text-label-sm font-label-sm font-semibold tracking-wider uppercase mt-0.5">Confirmar</span>
+</a>
+</nav>
+<!-- Interactive Logic: Micro-interactions & Countdown calculation -->
+<script>
+    // Live Countdown Timer logic
+    const targetDate = new Date("2026-11-14T19:00:00").getTime();
+    
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const dEl = document.getElementById("count-days");
+        const hEl = document.getElementById("count-hours");
+        const mEl = document.getElementById("count-minutes");
+        const sEl = document.getElementById("count-seconds");
+
+        if (dEl) dEl.innerText = days;
+        if (hEl) hEl.innerText = hours < 10 ? '0' + hours : hours;
+        if (mEl) mEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+        if (sEl) sEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+      }
+    }
+    
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Toggle Music Interaction Simulation
+    let isPlaying = false;
+    const audioBtn = document.getElementById("audioControlBtn");
+    const topMusicBtn = document.getElementById("musicToggleBtn");
+    const playIcon = document.getElementById("playIcon");
+
+    function toggleMusic() {
+      isPlaying = !isPlaying;
+      if (playIcon) {
+        playIcon.textContent = isPlaying ? "pause" : "play_arrow";
+      }
+      if (topMusicBtn) {
+        if (isPlaying) {
+          topMusicBtn.classList.add("animate-pulse");
+        } else {
+          topMusicBtn.classList.remove("animate-pulse");
+        }
+      }
+    }
+
+    if (audioBtn) audioBtn.addEventListener("click", toggleMusic);
+    if (topMusicBtn) topMusicBtn.addEventListener("click", toggleMusic);
+  </script>
+</body></html>

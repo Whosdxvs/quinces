@@ -1,0 +1,409 @@
+// Lista oficial de invitados para los XV de Mariangel
+window.INVITADOS_DATA = [
+  {
+    "id": 1,
+    "name": "Catalina y Sofía",
+    "raw_name": "Catalina y Sofía",
+    "cupos": 2,
+    "slug": "catalina-y-sofia"
+  },
+  {
+    "id": 2,
+    "name": "Jairo y esposa",
+    "raw_name": "Jairo y esposa",
+    "cupos": 2,
+    "slug": "jairo-y-esposa"
+  },
+  {
+    "id": 3,
+    "name": "Andrés, esposa e hija",
+    "raw_name": "Andrés,esposa e hija",
+    "cupos": 3,
+    "slug": "andres-esposa-e-hija"
+  },
+  {
+    "id": 4,
+    "name": "Evi e hija",
+    "raw_name": "Evi e hija",
+    "cupos": 2,
+    "slug": "evi-e-hija"
+  },
+  {
+    "id": 5,
+    "name": "Leonardo, esposa e hijos",
+    "raw_name": "Leonardo,esposa e hijos",
+    "cupos": 4,
+    "slug": "leonardo-esposa-e-hijos"
+  },
+  {
+    "id": 6,
+    "name": "Olmedo y esposa",
+    "raw_name": "Olmedo y esposa",
+    "cupos": 2,
+    "slug": "olmedo-y-esposa"
+  },
+  {
+    "id": 7,
+    "name": "Gladys",
+    "raw_name": "Gladys",
+    "cupos": 1,
+    "slug": "gladys"
+  },
+  {
+    "id": 8,
+    "name": "Jhoana e hija",
+    "raw_name": "jhoana e hija",
+    "cupos": 2,
+    "slug": "jhoana-e-hija"
+  },
+  {
+    "id": 9,
+    "name": "Mario y esposa",
+    "raw_name": "Mario y esposa",
+    "cupos": 2,
+    "slug": "mario-y-esposa"
+  },
+  {
+    "id": 10,
+    "name": "Eduarw y esposa",
+    "raw_name": "Eduarw y esposa",
+    "cupos": 2,
+    "slug": "eduarw-y-esposa"
+  },
+  {
+    "id": 11,
+    "name": "David, esposa e hija",
+    "raw_name": "David,esposa e hija",
+    "cupos": 3,
+    "slug": "david-esposa-e-hija"
+  },
+  {
+    "id": 12,
+    "name": "Doris y Luz Aída",
+    "raw_name": "Doris y luz Aída",
+    "cupos": 2,
+    "slug": "doris-y-luz-aida"
+  },
+  {
+    "id": 13,
+    "name": "Vivian e hija",
+    "raw_name": "vivían e hija",
+    "cupos": 2,
+    "slug": "vivian-e-hija"
+  },
+  {
+    "id": 14,
+    "name": "Claudia y Marta",
+    "raw_name": "Claudia y Marta",
+    "cupos": 2,
+    "slug": "claudia-y-marta"
+  },
+  {
+    "id": 15,
+    "name": "Gerardo",
+    "raw_name": "Gerardo",
+    "cupos": 1,
+    "slug": "gerardo"
+  },
+  {
+    "id": 16,
+    "name": "Jairo y Lucero",
+    "raw_name": "Jairo y lucero",
+    "cupos": 2,
+    "slug": "jairo-y-lucero"
+  },
+  {
+    "id": 17,
+    "name": "Wilson y señora",
+    "raw_name": "Wilson y señora",
+    "cupos": 2,
+    "slug": "wilson-y-senora"
+  },
+  {
+    "id": 18,
+    "name": "Paula y Pablo",
+    "raw_name": "Paula y pablo",
+    "cupos": 2,
+    "slug": "paula-y-pablo"
+  },
+  {
+    "id": 19,
+    "name": "Señora Aleyda",
+    "raw_name": "Señora aleyda",
+    "cupos": 1,
+    "slug": "senora-aleyda"
+  },
+  {
+    "id": 20,
+    "name": "Jorge",
+    "raw_name": "Jorge",
+    "cupos": 1,
+    "slug": "jorge"
+  },
+  {
+    "id": 21,
+    "name": "Norbey",
+    "raw_name": "Norbey",
+    "cupos": 1,
+    "slug": "norbey"
+  },
+  {
+    "id": 22,
+    "name": "Jhon Cano, esposa e hijos",
+    "raw_name": "Jhon cano,esposa e hijos",
+    "cupos": 3,
+    "slug": "jhon-cano-esposa-e-hijos"
+  },
+  {
+    "id": 23,
+    "name": "Michel e Isabela",
+    "raw_name": "Michel y Isabela",
+    "cupos": 2,
+    "slug": "michel-e-isabela"
+  },
+  {
+    "id": 24,
+    "name": "María e hija",
+    "raw_name": "María e hija",
+    "cupos": 2,
+    "slug": "maria-e-hija"
+  },
+  {
+    "id": 25,
+    "name": "Javier, señora e hijas",
+    "raw_name": "Javier,señora e hijas",
+    "cupos": 3,
+    "slug": "javier-senora-e-hijas"
+  },
+  {
+    "id": 26,
+    "name": "Amanda y Camila",
+    "raw_name": "Amanda y Camila",
+    "cupos": 2,
+    "slug": "amanda-y-camila"
+  },
+  {
+    "id": 27,
+    "name": "Julián, Karime e hijas",
+    "raw_name": "Julián,Karime e hijas",
+    "cupos": 4,
+    "slug": "julian-karime-e-hijas"
+  },
+  {
+    "id": 28,
+    "name": "Julián Vizcai, esposa e hija",
+    "raw_name": "Julián vizcai,esposa e hija",
+    "cupos": 3,
+    "slug": "julian-vizcai-esposa-e-hija"
+  },
+  {
+    "id": 29,
+    "name": "Juan Carlos, esposa e hija",
+    "raw_name": "Juan carlos,esposa e hija",
+    "cupos": 3,
+    "slug": "juan-carlos-esposa-e-hija"
+  },
+  {
+    "id": 30,
+    "name": "Valeri Amariles",
+    "raw_name": "Valeri amariles",
+    "cupos": 1,
+    "slug": "valeri-amariles"
+  },
+  {
+    "id": 31,
+    "name": "María José Vallejo",
+    "raw_name": "María José Vallejo",
+    "cupos": 1,
+    "slug": "maria-jose-vallejo"
+  },
+  {
+    "id": 32,
+    "name": "Geraldin Villada",
+    "raw_name": "Geraldin villada",
+    "cupos": 1,
+    "slug": "geraldin-villada"
+  },
+  {
+    "id": 33,
+    "name": "Mariana Anzola",
+    "raw_name": "Mariana anzola",
+    "cupos": 1,
+    "slug": "mariana-anzola"
+  },
+  {
+    "id": 34,
+    "name": "Salomé Arenas",
+    "raw_name": "Salome arenas",
+    "cupos": 1,
+    "slug": "salome-arenas"
+  },
+  {
+    "id": 35,
+    "name": "Leyci Gómez",
+    "raw_name": "Leyci Gómez",
+    "cupos": 1,
+    "slug": "leyci-gomez"
+  },
+  {
+    "id": 36,
+    "name": "Alejandra López",
+    "raw_name": "Alejandra López",
+    "cupos": 1,
+    "slug": "alejandra-lopez"
+  },
+  {
+    "id": 37,
+    "name": "Melany Torres",
+    "raw_name": "Melany torres",
+    "cupos": 1,
+    "slug": "melany-torres"
+  },
+  {
+    "id": 38,
+    "name": "Yianela Álzate",
+    "raw_name": "Yianela álzate",
+    "cupos": 1,
+    "slug": "yianela-alzate"
+  },
+  {
+    "id": 39,
+    "name": "María del Mar Vivas y Sebastián",
+    "raw_name": "María del mar vivas y Sebastián",
+    "cupos": 2,
+    "slug": "maria-del-mar-vivas-y-sebastian"
+  },
+  {
+    "id": 40,
+    "name": "Eilyn Mariana Velázquez",
+    "raw_name": "Eilyn Mariana Velázquez",
+    "cupos": 1,
+    "slug": "eilyn-mariana-velazquez"
+  },
+  {
+    "id": 41,
+    "name": "Sara Soto",
+    "raw_name": "Sara soto",
+    "cupos": 1,
+    "slug": "sara-soto"
+  },
+  {
+    "id": 42,
+    "name": "Valentina Quiroz",
+    "raw_name": "Valentina Quiroz",
+    "cupos": 1,
+    "slug": "valentina-quiroz"
+  },
+  {
+    "id": 43,
+    "name": "Ariana Castillo",
+    "raw_name": "Ariana castillo",
+    "cupos": 1,
+    "slug": "ariana-castillo"
+  },
+  {
+    "id": 44,
+    "name": "Nicolle Jiménez",
+    "raw_name": "Nicolle Jiménez",
+    "cupos": 1,
+    "slug": "nicolle-jimenez"
+  },
+  {
+    "id": 45,
+    "name": "Anny Valencia",
+    "raw_name": "Anny Valencia",
+    "cupos": 1,
+    "slug": "anny-valencia"
+  },
+  {
+    "id": 46,
+    "name": "Alexander Trujillo",
+    "raw_name": "Alexander Trujillo",
+    "cupos": 1,
+    "slug": "alexander-trujillo"
+  },
+  {
+    "id": 47,
+    "name": "Santiago Mejía",
+    "raw_name": "Santiago Mejía",
+    "cupos": 1,
+    "slug": "santiago-mejia"
+  },
+  {
+    "id": 48,
+    "name": "Santiago Montoya",
+    "raw_name": "Santiago Montolla",
+    "cupos": 1,
+    "slug": "santiago-montoya"
+  },
+  {
+    "id": 49,
+    "name": "Esteban Patiño",
+    "raw_name": "Esteban Patiño",
+    "cupos": 1,
+    "slug": "esteban-patino"
+  },
+  {
+    "id": 50,
+    "name": "José Alejandro Ordóñez",
+    "raw_name": "José Alejandro Ordóñez",
+    "cupos": 1,
+    "slug": "jose-alejandro-ordonez"
+  },
+  {
+    "id": 51,
+    "name": "Matías Marín y Mateo Marín",
+    "raw_name": "Matías Marín y mateo marin",
+    "cupos": 2,
+    "slug": "matias-marin-y-mateo-marin"
+  },
+  {
+    "id": 52,
+    "name": "Matías Gil",
+    "raw_name": "Matías Gil",
+    "cupos": 1,
+    "slug": "matias-gil"
+  },
+  {
+    "id": 53,
+    "name": "Patrick Robayo",
+    "raw_name": "Patrick robayo",
+    "cupos": 1,
+    "slug": "patrick-robayo"
+  },
+  {
+    "id": 54,
+    "name": "Alex Bermúdez",
+    "raw_name": "Alex Bermúdez",
+    "cupos": 1,
+    "slug": "alex-bermudez"
+  },
+  {
+    "id": 55,
+    "name": "Frank Ramos",
+    "raw_name": "Frank ramos",
+    "cupos": 1,
+    "slug": "frank-ramos"
+  },
+  {
+    "id": 56,
+    "name": "Jean Carlos, esposa e hija",
+    "raw_name": "Jean Carlos,esposa e hija",
+    "cupos": 1,
+    "slug": "jean-carlos-esposa-e-hija"
+  },
+  {
+    "id": 57,
+    "name": "Samuel Triana",
+    "raw_name": "Samuel Triana",
+    "cupos": 1,
+    "slug": "samuel-triana"
+  },
+  {
+    "id": 58,
+    "name": "Marleni y José",
+    "raw_name": "Marleni y José",
+    "cupos": 2,
+    "slug": "marleni-y-jose"
+  }
+];

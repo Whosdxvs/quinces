@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Invitados • Mis Quince Años Mariangel</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0c6490',
+                        'primary-dark': '#074868',
+                        secondary: '#d4af37',
+                        'secondary-dark': '#b38f24',
+                        accent: '#e6c86e',
+                        bglight: '#f4f9fd',
+                    },
+                    fontFamily: {
+                        headline: ['"Playfair Display"', 'serif'],
+                        body: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #eaf3fb 0%, #fbfdff 50%, #f4f0fa 100%);
+            min-height: 100vh;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 25px -5px rgba(12, 100, 144, 0.08), 0 8px 10px -6px rgba(12, 100, 144, 0.04);
+        }
+
+        .gold-badge {
+            background: linear-gradient(135deg, #fff7d6 0%, #fef0b8 100%);
+            border: 1px solid #d4af37;
+            color: #8a6d0b;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #f3d068 50%, #d4af37 100%);
+            color: #1a202c;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .gold-btn:hover {
+            filter: brightness(1.05);
+            transform: translateY(-1px);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #0c6490;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 9999px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 100;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 pb-16">
+
+    <!-- Header Banner -->
+    <header class="border-b border-amber-200/50 bg-white/70 backdrop-blur-md sticky top-0 z-30 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-100 border border-amber-400/50 flex items-center justify-center text-amber-600 shadow-sm">
+                    <span class="material-symbols-outlined text-2xl">crown</span>
+                </div>
+                <div>
+                    <h1 class="font-headline text-xl md:text-2xl font-bold text-primary">Mariangel Valencia Gálvez • XV Años</h1>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Panel de Control de Invitaciones Personalizadas</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="index.html" target="_blank" class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center gap-1.5 transition">
+                    <span class="material-symbols-outlined text-sm">visibility</span>
+                    Ver Invitación Base
+                </a>
+                <button onclick="copiarTodosLosEnlaces()" class="px-4 py-2 text-xs font-semibold rounded-lg gold-btn flex items-center gap-1.5 shadow">
+                    <span class="material-symbols-outlined text-sm">content_copy</span>
+                    Copiar Todos los Enlaces
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 mt-6">
+
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-4 mb-6">
+            <div class="glass-panel rounded-xl p-4 text-center">
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider block">Total Invitaciones</span>
+                <span id="statTotal" class="font-headline text-2xl md:text-3xl font-bold text-primary mt-1 block">55</span>
+                <span class="text-[11px] text-slate-400">Familias / Personas</span>
+            </div>
+            <div class="glass-panel rounded-xl p-4 text-center">
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider block">Total Cupos</span>
+                <span id="statCupos" class="font-headline text-2xl md:text-3xl font-bold text-amber-600 mt-1 block">91</span>
+                <span class="text-[11px] text-slate-400">Pases reservados</span>
+            </div>
+            <div class="glass-panel rounded-xl p-4 text-center">
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider block">Pases Individuales</span>
+                <span id="statIndividual" class="font-headline text-2xl md:text-3xl font-bold text-slate-700 mt-1 block">31</span>
+                <span class="text-[11px] text-slate-400">1 Cupo</span>
+            </div>
+            <div class="glass-panel rounded-xl p-4 text-center">
+                <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider block">Pases Familiares / Pareja</span>
+                <span id="statFamiliar" class="font-headline text-2xl md:text-3xl font-bold text-emerald-600 mt-1 block">24</span>
+                <span class="text-[11px] text-slate-400">2 a 4 Cupos</span>
+            </div>
+        </div>
+
+        <!-- Domain Configuration Banner -->
+        <div class="glass-panel rounded-xl p-4 mb-6 flex flex-col md:flex-row items-center justify-between gap-3">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <span class="material-symbols-outlined text-amber-500 text-2xl">link</span>
+                <div>
+                    <span class="text-xs font-bold text-slate-700 uppercase tracking-wide block">Enlace Base de la Invitación:</span>
+                    <span class="text-[11px] text-slate-500">Los links se generarán usando esta dirección web. Puedes modificarla si usas otro dominio.</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 w-full md:w-auto">
+                <input id="baseDomainInput" type="text" class="px-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white font-mono flex-1 md:w-80 shadow-sm focus:outline-none focus:border-primary" />
+                <button onclick="guardarDominio()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-white hover:bg-primary-dark transition shadow-sm">
+                    Actualizar
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="glass-panel rounded-xl p-4 mb-6">
+            <div class="flex flex-col md:flex-row gap-3 items-center justify-between">
+                <!-- Search Box -->
+                <div class="relative w-full md:w-80">
+                    <span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-lg">search</span>
+                    <input id="searchInput" oninput="filtrarInvitados()" type="text" placeholder="Buscar invitado por nombre o ID..." class="w-full pl-9 pr-4 py-2 text-xs rounded-lg border border-slate-300 bg-white shadow-sm focus:outline-none focus:border-primary" />
+                </div>
+                <!-- Filter Pills -->
+                <div class="flex flex-wrap gap-1.5 w-full md:w-auto justify-start md:justify-end text-xs">
+                    <button onclick="setFiltroCupos('all')" class="filtro-btn px-3 py-1.5 rounded-full font-semibold bg-primary text-white transition" data-filtro="all">
+                        Todos (55)
+                    </button>
+                    <button onclick="setFiltroCupos(1)" class="filtro-btn px-3 py-1.5 rounded-full font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-filtro="1">
+                        1 Cupo (31)
+                    </button>
+                    <button onclick="setFiltroCupos(2)" class="filtro-btn px-3 py-1.5 rounded-full font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-filtro="2">
+                        2 Cupos (16)
+                    </button>
+                    <button onclick="setFiltroCupos(3)" class="filtro-btn px-3 py-1.5 rounded-full font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-filtro="3">
+                        3 Cupos (6)
+                    </button>
+                    <button onclick="setFiltroCupos(4)" class="filtro-btn px-3 py-1.5 rounded-full font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition" data-filtro="4">
+                        4 Cupos (2)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guests Grid / Cards -->
+        <div id="guestsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Dynamically populated via JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-12">
+            <span class="material-symbols-outlined text-4xl text-slate-300">person_search</span>
+            <p class="text-slate-500 font-medium text-sm mt-2">No se encontraron invitados con ese término de búsqueda.</p>
+        </div>
+
+    </main>
+
+    <!-- Floating Toast Notification -->
+    <div id="toastNotification" class="toast flex items-center gap-2">
+        <span class="material-symbols-outlined text-amber-300 text-base">check_circle</span>
+        <span id="toastMsg" class="text-xs font-semibold">¡Enlace copiado al portapapeles!</span>
+    </div>
+
+    <!-- Invitados Data -->
+    <script src="invitados.js"></script>
+
+    <script>
+        let currentFilter = 'all';
+        let currentSearch = '';
+
+        // Determine base domain
+        function getBaseDomain() {
+            const saved = localStorage.getItem('mariangel_invite_domain');
+            if (saved) return saved;
+            let origin = window.location.origin;
+            if (!origin || origin.startsWith('file') || origin.includes('localhost') || origin.includes('127.0.0.1')) {
+                return 'https://invitacion-misxv-mariangel.netlify.app';
+            }
+            return origin;
+        }
+
+        function guardarDominio() {
+            let val = document.getElementById('baseDomainInput').value.trim();
+            if (val.endsWith('/')) val = val.slice(0, -1);
+            localStorage.setItem('mariangel_invite_domain', val);
+            mostrarToast('Dominio actualizado');
+            renderGuests();
+        }
+
+        function setFiltroCupos(filtro) {
+            currentFilter = filtro;
+            document.querySelectorAll('.filtro-btn').forEach(btn => {
+                if (btn.getAttribute('data-filtro') === String(filtro)) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('bg-slate-100', 'text-slate-700');
+                } else {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-slate-100', 'text-slate-700');
+                }
+            });
+            renderGuests();
+        }
+
+        function filtrarInvitados() {
+            currentSearch = document.getElementById('searchInput').value.trim().toLowerCase();
+            renderGuests();
+        }
+
+        function renderGuests() {
+            const container = document.getElementById('guestsGrid');
+            const empty = document.getElementById('emptyState');
+            const domain = getBaseDomain();
+            container.innerHTML = '';
+
+            const list = window.INVITADOS_DATA || [];
+            let filtered = list.filter(g => {
+                // Filter by cupos
+                if (currentFilter !== 'all' && g.cupos !== parseInt(currentFilter, 10)) {
+                    return false;
+                }
+                // Filter by search
+                if (currentSearch) {
+                    const matchName = g.name.toLowerCase().includes(currentSearch);
+                    const matchId = String(g.id).includes(currentSearch);
+                    if (!matchName && !matchId) return false;
+                }
+                return true;
+            });
+
+            if (filtered.length === 0) {
+                empty.classList.remove('hidden');
+                return;
+            } else {
+                empty.classList.add('hidden');
+            }
+
+            filtered.forEach(guest => {
+                const url = `${domain}/?id=${guest.id}`;
+                const cuposText = guest.cupos === 1 ? '1 Cupo' : `${guest.cupos} Cupos`;
+                const cuposDesc = guest.cupos === 1 ? '1 persona' : `${guest.cupos} personas`;
+
+                const card = document.createElement('div');
+                card.className = 'glass-panel rounded-xl p-4 flex flex-col justify-between hover:shadow-md transition border border-amber-200/50 bg-white/80';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-[11px] font-bold text-slate-400 font-mono">#${guest.id}</span>
+                            <span class="gold-badge text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1">
+                                <span class="material-symbols-outlined text-xs">group</span>
+                                ${cuposText}
+                            </span>
+                        </div>
+                        <h3 class="font-headline text-base font-bold text-primary leading-tight">${guest.name}</h3>
+                        <p class="text-[11px] text-slate-500 mt-1">Pase válido para ${cuposDesc}</p>
+                    </div>
+
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex flex-col gap-2">
+                        <div class="bg-slate-50 border border-slate-200 rounded p-1.5 flex items-center justify-between gap-1 text-[11px] font-mono text-slate-600 truncate">
+                            <span class="truncate">${url}</span>
+                            <button onclick="copiarAlPortapapeles('${url}', this)" title="Copiar Enlace" class="p-1 rounded hover:bg-slate-200 text-slate-600 transition flex items-center shrink-0">
+                                <span class="material-symbols-outlined text-xs">content_copy</span>
+                            </button>
+                        </div>
+                        <a href="${url}" target="_blank" class="w-full py-2 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold flex items-center justify-center gap-1.5 transition">
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            Abrir Invitación
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function copiarAlPortapapeles(texto, btn) {
+            navigator.clipboard.writeText(texto).then(() => {
+                mostrarToast('¡Enlace copiado al portapapeles!');
+                if (btn) {
+                    const icon = btn.querySelector('.material-symbols-outlined');
+                    if (icon) {
+                        const original = icon.textContent;
+                        icon.textContent = 'check';
+                        setTimeout(() => icon.textContent = original, 1200);
+                    }
+                }
+            }).catch(err => {
+                console.error(err);
+            });
+        }
+
+        function updateStats() {
+            const list = window.INVITADOS_DATA || [];
+            const totalGuests = list.length;
+            const totalCupos = list.reduce((sum, g) => sum + (g.cupos || 1), 0);
+            const totalIndividual = list.filter(g => (g.cupos || 1) === 1).length;
+            const totalFamiliar = list.filter(g => (g.cupos || 1) > 1).length;
+
+            const elTotal = document.getElementById('statTotal');
+            const elCupos = document.getElementById('statCupos');
+            const elInd = document.getElementById('statIndividual');
+            const elFam = document.getElementById('statFamiliar');
+
+            if (elTotal) elTotal.textContent = totalGuests;
+            if (elCupos) elCupos.textContent = totalCupos;
+            if (elInd) elInd.textContent = totalIndividual;
+            if (elFam) elFam.textContent = totalFamiliar;
+
+            // Update filter pill counts
+            const cAll = totalGuests;
+            const c1 = list.filter(g => (g.cupos || 1) === 1).length;
+            const c2 = list.filter(g => (g.cupos || 1) === 2).length;
+            const c3 = list.filter(g => (g.cupos || 1) === 3).length;
+            const c4 = list.filter(g => (g.cupos || 1) === 4).length;
+
+            document.querySelectorAll('.filtro-btn').forEach(btn => {
+                const f = btn.getAttribute('data-filtro');
+                if (f === 'all') btn.textContent = `Todos (${cAll})`;
+                else if (f === '1') btn.textContent = `1 Cupo (${c1})`;
+                else if (f === '2') btn.textContent = `2 Cupos (${c2})`;
+                else if (f === '3') btn.textContent = `3 Cupos (${c3})`;
+                else if (f === '4') btn.textContent = `4 Cupos (${c4})`;
+            });
+        }
+
+        function copiarTodosLosEnlaces() {
+            const domain = getBaseDomain();
+            const list = window.INVITADOS_DATA || [];
+            let texto = `👑 INVITACIONES REALES • XV AÑOS DE MARIANGEL VALENCIA GÁLVEZ 👑\nTotal: ${list.length} invitados\n\n`;
+
+            list.forEach(g => {
+                const cupos = g.cupos === 1 ? '1 cupo' : `${g.cupos} cupos`;
+                texto += `${g.id}. ${g.name} (${cupos}):\n${domain}/?id=${g.id}\n\n`;
+            });
+
+            navigator.clipboard.writeText(texto).then(() => {
+                mostrarToast(`¡Lista completa de ${list.length} invitados copiada!`);
+            });
+        }
+
+        function mostrarToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            const domainInput = document.getElementById('baseDomainInput');
+            domainInput.value = getBaseDomain();
+            updateStats();
+            renderGuests();
+        });
+    </script>
+</body>
+
+</html>
