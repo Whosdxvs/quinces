@@ -1184,17 +1184,26 @@
 
                 if (guest) {
                     const name = guest.name;
-                    const cupos = guest.cupos || 1;
-                    const cuposText = cupos === 1 ? '1 persona' : `${cupos} personas`;
-                    const cuposBadgeText = cupos === 1 ? '1 Cupo Reservado' : `${cupos} Cupos Reservados`;
+                    const hasCupos = guest.cupos !== null && guest.cupos !== undefined && guest.cupos !== 0 && guest.cupos !== '0';
+                    const cupos = hasCupos ? (parseInt(guest.cupos, 10) || 1) : null;
+                    const cuposText = cupos ? (cupos === 1 ? '1 persona' : `${cupos} personas`) : '';
+                    const cuposBadgeText = cupos ? (cupos === 1 ? '1 Cupo Reservado' : `${cupos} Cupos Reservados`) : '';
 
                     // 1. Splash screen badge
                     const splashCard = document.getElementById('splashGuestCard');
                     const splashName = document.getElementById('splashGuestName');
                     const splashCupos = document.getElementById('splashGuestCupos');
-                    if (splashCard && splashName && splashCupos) {
+                    if (splashCard && splashName) {
                         splashName.textContent = name;
-                        splashCupos.textContent = `✨ ${cuposBadgeText} ✨`;
+                        if (splashCupos) {
+                            if (hasCupos) {
+                                splashCupos.textContent = `✨ ${cuposBadgeText} ✨`;
+                                splashCupos.style.display = 'block';
+                            } else {
+                                splashCupos.textContent = '';
+                                splashCupos.style.display = 'none';
+                            }
+                        }
                         splashCard.style.display = 'block';
                     }
 
@@ -1202,9 +1211,18 @@
                     const heroBadge = document.getElementById('heroGuestBadge');
                     const heroName = document.getElementById('heroGuestName');
                     const heroCupos = document.getElementById('heroGuestCupos');
-                    if (heroBadge && heroName && heroCupos) {
+                    if (heroBadge && heroName) {
                         heroName.textContent = name;
-                        heroCupos.textContent = cupos === 1 ? '1 Pase' : `${cupos} Pases`;
+                        if (heroCupos) {
+                            if (hasCupos) {
+                                heroCupos.textContent = cupos === 1 ? '1 Pase' : `${cupos} Pases`;
+                                heroCupos.style.display = 'inline';
+                                if (heroCupos.previousElementSibling) heroCupos.previousElementSibling.style.display = 'inline';
+                            } else {
+                                heroCupos.style.display = 'none';
+                                if (heroCupos.previousElementSibling) heroCupos.previousElementSibling.style.display = 'none';
+                            }
+                        }
                         heroBadge.style.display = 'inline-flex';
                     }
 
@@ -1212,16 +1230,25 @@
                     const rsvpBox = document.getElementById('rsvpGuestBox');
                     const rsvpName = document.getElementById('rsvpGuestName');
                     const rsvpCupos = document.getElementById('rsvpGuestCupos');
-                    if (rsvpBox && rsvpName && rsvpCupos) {
+                    if (rsvpBox && rsvpName) {
                         rsvpName.textContent = name;
-                        rsvpCupos.textContent = `Pase de Gala para ${cuposText}`;
+                        if (rsvpCupos) {
+                            const cuposContainer = rsvpCupos.closest('div');
+                            if (hasCupos) {
+                                rsvpCupos.textContent = `Pase de Gala para ${cuposText}`;
+                                if (cuposContainer) cuposContainer.style.display = 'inline-flex';
+                            } else {
+                                if (cuposContainer) cuposContainer.style.display = 'none';
+                            }
+                        }
                         rsvpBox.style.display = 'block';
                     }
 
                     // 4. Update WhatsApp confirmation button
                     const waBtn = document.getElementById('rsvpWhatsAppBtn');
                     if (waBtn) {
-                        const waMsg = `¡Hola! Confirmo con mucha alegría mi asistencia a los XV años de Mariangel ✨ Invitado(s): ${name} (${cuposText}) 👑🎉`;
+                        const waCuposInfo = hasCupos ? ` (${cuposText})` : '';
+                        const waMsg = `¡Hola! Confirmo con mucha alegría mi asistencia a los XV años de Mariangel ✨ Invitado(s): ${name}${waCuposInfo} 👑🎉`;
                         waBtn.href = `https://wa.me/573042870657?text=${encodeURIComponent(waMsg)}`;
                     }
                 }

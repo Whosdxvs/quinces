@@ -405,5 +405,12 @@ window.INVITADOS_DATA = [
     "raw_name": "Marleni y José",
     "cupos": 2,
     "slug": "marleni-y-jose"
+  },
+  {
+    "id": 59,
+    "name": "Omayra y hermanas",
+    "raw_name": "Omayra y hermanas",
+    "cupos": null,
+    "slug": "omayra-y-hermanas"
   }
 ];
