@@ -412,5 +412,96 @@ window.INVITADOS_DATA = [
     "raw_name": "Omayra y hermanas",
     "cupos": null,
     "slug": "omayra-y-hermanas"
+  },
+  {
+    "id": 60,
+    "name": "Jenny e hijos",
+    "raw_name": "Jenny e hijos",
+    "cupos": 3,
+    "slug": "jenny-e-hijos"
+  },
+  {
+    "id": 61,
+    "name": "Alex y Sandra",
+    "raw_name": "Alex y Sandra",
+    "cupos": 2,
+    "slug": "alex-y-sandra"
+  },
+  {
+    "id": 62,
+    "name": "Sara Cifuentes",
+    "raw_name": "Sara cifuentes",
+    "cupos": 1,
+    "slug": "sara-cifuentes"
+  },
+  {
+    "id": 63,
+    "name": "Mariana Gálvez",
+    "raw_name": "Mariana Gálvez",
+    "cupos": 1,
+    "slug": "mariana-galvez"
+  },
+  {
+    "id": 64,
+    "name": "Mauricio, señora e hijos",
+    "raw_name": "Mauricio,señora e hijos",
+    "cupos": 4,
+    "slug": "mauricio-senora-e-hijos"
+  },
+  {
+    "id": 65,
+    "name": "Manuel y esposa",
+    "raw_name": "Manuel y esposa",
+    "cupos": 2,
+    "slug": "manuel-y-esposa"
+  },
+  {
+    "id": 66,
+    "name": "Marisol",
+    "raw_name": "Marisol",
+    "cupos": 1,
+    "slug": "marisol"
+  },
+  {
+    "id": 67,
+    "name": "Andrés",
+    "raw_name": "Andrés",
+    "cupos": 1,
+    "slug": "andres"
+  },
+  {
+    "id": 68,
+    "name": "Adalberto",
+    "raw_name": "Adalberto",
+    "cupos": 1,
+    "slug": "adalberto"
+  },
+  {
+    "id": 69,
+    "name": "Katherine Hernández",
+    "raw_name": "Katherine Hernández",
+    "cupos": 1,
+    "slug": "katherine-hernandez"
+  },
+  {
+    "id": 70,
+    "name": "David",
+    "raw_name": "David",
+    "cupos": 1,
+    "slug": "david"
+  },
+  {
+    "id": 71,
+    "name": "Pablo Escudero",
+    "raw_name": "Pablo escudero",
+    "cupos": 1,
+    "slug": "pablo-escudero"
+  },
+  {
+    "id": 72,
+    "name": "Valery Amariles y novio",
+    "raw_name": "Valery amariles y novio",
+    "cupos": 2,
+    "slug": "valery-amariles-y-novio"
   }
 ];
