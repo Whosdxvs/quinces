@@ -502,5 +502,47 @@
     "raw_name": "Valery amariles y novio",
     "cupos": 2,
     "slug": "valery-amariles-y-novio"
+  },
+  {
+    "id": 73,
+    "name": "Jhonson y esposa",
+    "raw_name": "Jhonson y esposa",
+    "cupos": 2,
+    "slug": "jhonson-y-esposa"
+  },
+  {
+    "id": 74,
+    "name": "Stella Estrada",
+    "raw_name": "Stella Estrada",
+    "cupos": 1,
+    "slug": "stella-estrada"
+  },
+  {
+    "id": 75,
+    "name": "Mariela",
+    "raw_name": "Mariela",
+    "cupos": 1,
+    "slug": "mariela"
+  },
+  {
+    "id": 76,
+    "name": "Aída Luz",
+    "raw_name": "Aida luz",
+    "cupos": 1,
+    "slug": "aida-luz"
+  },
+  {
+    "id": 77,
+    "name": "Melissa e hija",
+    "raw_name": "Melissa e hija",
+    "cupos": 2,
+    "slug": "melissa-e-hija"
+  },
+  {
+    "id": 78,
+    "name": "Juan David Vásquez",
+    "raw_name": "Juan David Vásquez",
+    "cupos": 1,
+    "slug": "juan-david-vasquez"
   }
 ]
