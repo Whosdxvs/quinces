@@ -545,5 +545,12 @@ window.INVITADOS_DATA = [
     "raw_name": "Juan David Vásquez",
     "cupos": 1,
     "slug": "juan-david-vasquez"
+  },
+  {
+    "id": 79,
+    "name": "Elisabeth Erazo",
+    "raw_name": "Elisabeth erazo",
+    "cupos": 1,
+    "slug": "elisabeth-erazo"
   }
 ];
